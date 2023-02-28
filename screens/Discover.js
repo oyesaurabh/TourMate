@@ -15,15 +15,21 @@ import { Hotels, Attractions, Restaurants } from "../assets/index";
 import { getPlacesData } from "../api";
 
 const Discover = () => {
+  // help to navigate to Items page.
   const navigation = useNavigation();
+  // type = restaurants || hotel || attractions
   const [type, setType] = useState("restaurants");
   const [location, setLocation] = useState(""); /* search location */
+  // default coordinates ( GREATER NOIDA )
   const [coordinates, setCoordinates] = useState({
     lat: "28.4670734",
     lon: "77.5137649",
   });
+  //if error
   const [error, setError] = useState("No Data Found");
+  //shows loading if data is not fetched completely.
   const [isLoading, setIsLoading] = useState(false);
+  //data about searched places
   const [mainData, setMainData] = useState([]);
 
   //to hide the discover navigation stack

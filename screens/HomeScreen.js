@@ -1,12 +1,13 @@
+import React, { useLayoutEffect } from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
 import { front, github_black } from "../assets/index";
-import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const github_url = "https://github.com/oyeSAURABH";
 
 const HomeScreen = () => {
+  // navigate to different screen
   const navigation = useNavigation();
 
   //to hide the home navigation stack
@@ -59,6 +60,7 @@ const HomeScreen = () => {
       <View className="flex-1 relative items-center justify-center">
         <Image source={front} className="w-full h-full object-cover" />
 
+        {/* GO button to navigate to HOME screen */}
         <TouchableOpacity
           onPress={() => navigation.navigate("Discover")}
           className="absolute bottom-20 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center"
