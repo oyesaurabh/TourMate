@@ -25,7 +25,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <SafeAreaView className="bg-white-100 flex-1 relative">
+    <SafeAreaView className="bg-white flex-1 relative">
       {/* first section */}
       <View className="flex-row mt-8 items-center mx-6 flex-1 justify-between">
         <View className="w-16 h-16 bg-black rounded-full items-center justify-center">
@@ -63,7 +63,7 @@ const HomeScreen = () => {
         {/* GO button to navigate to HOME screen */}
         <TouchableOpacity
           onPress={() => navigation.navigate("Discover")}
-          className="absolute bottom-20 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center"
+          className="absolute bottom-20 rounded-full items-center justify-center"
         >
           <View className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]">
             <Text className="text-white text-[36px] font-bold">Go</Text>
